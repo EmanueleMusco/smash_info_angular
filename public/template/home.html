@@ -1,0 +1,21 @@
+<div ngController="controllerHome">
+    <link id="pagestyle" href="css/styleGeneral.css" rel="stylesheet">
+    <!-- intestazione -->
+    <div class="intestazione">
+        <center>
+            <h1>Smash_Info</h1>
+        </center>
+    </div>
+
+    <!-- menu di gioco -->
+    <div class="grid-container">
+        <div class="grid-item"> <button class="button" id="button1" ng-click="redirect('creazione')">Crea una stanza</button></div>
+        <div class="grid-item"> <button class="button" id="button2" ng-click="redirect('stanza')">Unisciti ad una stanza</button></div>
+        <div class="grid-item"> <button class="button" id="button4" ng-click="redirect()">Impostazioni</button></div>
+        <div class="grid-item"> <button class="button" id="button5" ng-model="status" ng-click="music()">{{status}} Musica</button></div>
+    </div>
+    <div id="container">
+        <canvas id="canvas1"></canvas>
+        <audio id="audio1"></audio>
+    </div>
+</div>

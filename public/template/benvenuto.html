@@ -1,0 +1,16 @@
+<div ngController="controllerBenvenuto">
+    <link rel="stylesheet" href="css/styleBenvenuto.css">
+
+
+    <div class="intestazione"><h1>Smash_Info</h1></div>
+
+    <div class="grid-container" >
+        <div class="grid-item"><input type="text" name="username" id="username" placeholder="Name..." ng-model="new.username"></div>
+        <div class="grid-item"> <button class="button" id="bottoneIniziale" ng-click="send()">Inizia a giocare</button></div>
+    </div>  
+    
+    <div id="container">            
+        <canvas id="canvas1"></canvas>
+        <audio id="audio1"></audio>
+    </div>
+</div>

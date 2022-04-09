@@ -1,0 +1,44 @@
+<div ngController="controllerStanza">
+    <link id="pagestyle" href="css/styleGeneral.css" rel="stylesheet">
+    <link id="pagestyle" href="css/styleStanza.css" rel="stylesheet">
+    <div class="intestazione">
+        <center>
+            <h1>Smash_Info</h1>
+        </center>
+    </div>
+
+
+    <div class="tutto" ng-show="code">
+
+        <div class="sinistra">
+            <div class="child text-area">
+                placeholder
+                <!-- messaggi -->
+            </div>
+            <div class="child text">
+                placeholder
+                <!-- testo e bottone invio -->
+            </div>
+        </div>
+        
+        <div class="centro">
+            <div class="stat"><button ng-model="status">{{status}}</button></div>
+            <div class="stat">
+                <h1 class="cod_partita" ng-model="code">codice partita: {{code}}</h1>
+            </div>
+        </div>
+        
+        <div class="destra">
+            <div class="child stickman-display">
+
+            </div>
+            <div class="child color-selector">
+                <input type="color" value="#AAAAAA" id="selected-color">
+            </div>
+        </div>
+
+
+    </div>
+
+
+</div>

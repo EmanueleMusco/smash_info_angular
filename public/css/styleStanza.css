@@ -1,0 +1,147 @@
+.tutto{
+    display:grid;
+    height:60%;
+    width:100%;
+    grid-template-columns: repeat(3,minmax(0,1fr));
+}
+.cod_partita{
+
+}
+.sinistra{
+    display: grid;
+    grid-template-rows: 80% 20%;
+    border-radius: 15px;
+    margin :15px;
+    color: greenyellow; 
+    border:1em double greenyellow;
+}
+.sinistra>.child{
+    /* border: 1px solid aliceblue; */
+    
+}
+.text-area{
+    overflow: hidden;
+    overflow-y: auto;
+    background: rgba(255,255,255,0.02);
+}
+.text{
+    background: rgba(255,255,255,0.05);
+}
+
+
+.destra{
+    display: grid;
+    grid-template-rows: 80% 20%;
+    padding:15px;
+    border:1em double greenyellow;
+    border-radius: 10px;
+    
+}
+.destra>.child{
+    
+    background: black;
+}
+.color-selector{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-selector>input[type=color]{
+    width: 10%;
+    height: 40%;
+}
+.color-selector>input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+.color-selector>input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+.centro{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    text-align: center;
+}
+
+.ng-scope{
+    height:100vh;
+
+}
+.stat{
+    padding: 20px;
+}
+
+
+
+/* stile bottone*/
+.stat>button {
+    width: 220px;
+    height: 50px;
+    border: greenyellow 2px double;
+    border-radius: 10px;
+    outline: none;
+    color:greenyellow;
+    background: black;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    font-size:1.7rem;
+
+}
+
+.stat>button:before {
+    content: '';
+    background: linear-gradient(45deg, #00992e, #11ff90, #5dff6a, #47ff2e, #5bff3a, #00af26, #76ff98, #5bff55, #60ff60);
+    /* #00992e, #11ff90, #5dff6a, #47ff2e, #5bff3a, #00af26, #76ff98, #5bff55, #60ff60 
+    background: linear-gradient(45deg, #00ff4c, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    non lgbt */
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+
+.stat>button:active:after {
+    background: black;
+}
+
+.stat>button:hover:before {
+    opacity: 1;
+}
+.stat>button:hover{
+    animation: zoom forwards .5s;
+}
+@keyframes zoom{
+    100%{
+        text-shadow: 0 0 3px rgba(83,237,101,0.92), 0 0 2px rgba(83,237,101,0.92);
+        color:rgb(164, 233, 27);
+    }
+}
+.stat>button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+/* stile bottone*/
