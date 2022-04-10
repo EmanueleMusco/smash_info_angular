@@ -27,9 +27,9 @@ var address = undefined
 
 
 let connection = mysql.createConnection({ // connesione a mysql
-  host: '45.14.185.102',
+  host: '************',
   user: 'smash_info',
-  password: 'Smash_Admin_Setting2022!',
+  password: '*******************',
   database: 'smash_info'
 })
 
